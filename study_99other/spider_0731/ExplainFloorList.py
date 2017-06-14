@@ -24,7 +24,7 @@ def explain_floor_list(model='db', page_num=0, page_end=1):
     :param page_end:    页面结束数
     :return:
     '''
-    env = CPC.Env(env=model)
+    env = CPC.Env(env=dev_model)
     mysql = env.getMySQLClient()
     cur = mysql.get_cursor()
     mongo = env.getMongoClient()
@@ -80,7 +80,7 @@ def explain_floor_list_page(page, mysql, cur, mongo):
         #     step += 1
         # mysql.execute(sql, cur)
     sql1 = "update %s set val1=%s where key1='%s' and key2='%s'" % (CPC.DB.Table_config,
-            page-1, CPC.DB.Key1_Floor_List, CPC.DB.key2_Build_page_cur)
+            page-1, CPC.DB.Key1_Floor_List, CPC.DB.key2_Floor_List_page_cur)
     mysql.execute(sql1, cur)
     return list_floor
 

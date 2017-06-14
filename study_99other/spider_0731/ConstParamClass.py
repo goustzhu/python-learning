@@ -58,10 +58,11 @@ class DB(object):
 
     Coll_floor_list = 'floor_list'
     Coll_floor_search = 'floor_search'
+    Coll_floor_open = 'floor_open'
 
     Key1_Build_Cert = 'build_cert'
     Key1_Floor_List = 'floor_list_info'
-
+    Key1_Floor_Open = 'floor_open'
 
     key2_Build_record_sum = 'record_sum'
     key2_Build_page_sum = 'page_sum'
@@ -71,6 +72,8 @@ class DB(object):
     key2_Floor_List_record_sum = 'record_sum'
     key2_Floor_List_page_sum = 'page_sum'
     key2_Floor_List_page_cur = 'page_cur'
+
+    key2_Floor_Open_Itemid_cur = 'itemid_cur'
 
     # online model
     Const_Online_MySQL_Host = '192.168.199.31'

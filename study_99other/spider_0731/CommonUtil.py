@@ -9,14 +9,30 @@ from bs4 import BeautifulSoup
 import pymongo
 import pymysql
 
-def request_url(url):
+def request_url_encode(url, encode='gb2312'):
     '''
     从URL获取数据
     :param url:
     :return:
     '''
+    html = requests.get(url)
+    html.encoding=encode
+    return html.text
+
+def request_url(url):
     html = requests.get(url).content
     return html
+
+def parse_html(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    # print soup.title.prettify()
+    # print soup.title.prettify('gb18030')
+    return soup
+
+def parser_html_by_attrs(html, tag_name, attrs, encode='gb18030'):
+    soup = BeautifulSoup(html, 'html.parser', from_encoding=encode)
+    tag = soup.find(tag_name, attrs=attrs)
+    return tag
 
 def parser_html_by_class_one(html, tags_name, class_values):
     soup = BeautifulSoup(html, 'html.parser', from_encoding='gb18030')
