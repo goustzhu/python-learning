@@ -55,25 +55,52 @@ class DB(object):
 
     Table_config = 'dbconfig'
     Table_BuildCert = 'floor_cert'
+    Table_FloorDiscount = 'floor_discount'
+    Table_FLoorBase = 'floor_base_info'
+    Table_FloorDetail = 'floor_detail_info'
+    Table_FloorSimilar = 'floor_similar_info'
+    Table_FloorExport = 'floor_export_score'
+    Table_CompanyComplaint = 'company_complaint_info'
 
     Coll_floor_list = 'floor_list'
     Coll_floor_search = 'floor_search'
     Coll_floor_open = 'floor_open'
+    Coll_floor_news = 'floor_news'
+    Coll_Company_info = 'company_info'
+    Coll_Company_Complaint = 'company_complaint'
 
     Key1_Build_Cert = 'build_cert'
     Key1_Floor_List = 'floor_list_info'
     Key1_Floor_Open = 'floor_open'
+    Key1_Floor_Discount = 'floor_discount'
+    Key1_Floor_Info = 'floor_info'
+    Key1_Company_develop = 'complaint_develop'
+    Key1_Company_agency = 'complaint_agency'
+    Key1_Company_property = 'complaint_property'
+    Key1_Company_decoration = 'complaint_decoration'
+    Key1_Company_info = 'company_info'
 
-    key2_Build_record_sum = 'record_sum'
-    key2_Build_page_sum = 'page_sum'
-    key2_Build_record_cur = 'record_cur'
-    key2_Build_page_cur = 'page_cur'
+    Key2_record_sum = 'record_sum'
+    Key2_record_cur = 'record_cur'
+    Key2_page_sum = 'page_sum'
+    Key2_page_cur = 'page_cur'
 
-    key2_Floor_List_record_sum = 'record_sum'
-    key2_Floor_List_page_sum = 'page_sum'
-    key2_Floor_List_page_cur = 'page_cur'
+    key2_Build_record_sum = Key2_record_sum
+    key2_Build_page_sum = Key2_page_sum
+    key2_Build_record_cur = Key2_record_cur
+    key2_Build_page_cur = Key2_page_cur
+
+    key2_Floor_List_record_sum = Key2_record_sum
+    key2_Floor_List_page_sum = Key2_page_sum
+    key2_Floor_List_page_cur = Key2_page_cur
 
     key2_Floor_Open_Itemid_cur = 'itemid_cur'
+
+    key2_Floor_Discount_record_sum = Key2_record_sum
+    key2_Floor_Discount_page_sum = Key2_page_sum
+    key2_Floor_Discount_page_cur = Key2_page_cur
+
+    key2_Floor_info_record_cur = Key2_record_cur
 
     # online model
     Const_Online_MySQL_Host = '192.168.199.31'

@@ -15,7 +15,7 @@ def test1():
     print result
 
 def test():
-    dev = 'online'
+    text = u'星城映象三期中小户型VIP2000抵5000\\'
 
 
 if __name__=='__main__':
