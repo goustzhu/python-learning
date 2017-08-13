@@ -6,6 +6,8 @@
 # @Software: PyCharm
 import sys, os, time, datetime
 import numpy as np
+import scipy as sp
+from scipy import stats
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -17,7 +19,15 @@ def test1():
     print np_data
     print np_data[int(0.1*len(np_data)):int(0.9*len(np_data))]
 
+def test():
+    np_data = np.array([12.6, 13.4, 12.8, 13.2])
+    mean = np.mean(np_data)
+    std = np.std(np_data)
+    alpha = 0.05
+    z_score = stats.norm.pdf(alpha)
+    print mean, std, z_score
+
 if __name__=='__main__':
     print 'begin'.center(100, '-')
-    test1()
+    test()
     print ' end '.center(100, '-')
